@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<ruleset name="Custom Rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>
+        My custom rules
+    </description>
+
+
+    <!-- Your rules will come here -->
+    <rule ref="category/java/errorprone.xml" >
+        <exclude name="BeanMembersShouldSerialize"/>
+    </rule>
+    <rule ref="category/java/codestyle.xml" >
+        <exclude name="NoPackage"/>
+        <exclude name="LocalVariableCouldBeFinal"/>
+        <exclude name="MethodArgumentCouldBeFinal"/>
+        <exclude name="AtLeastOneConstructor"/>
+    </rule>
+    <rule ref="category/java/design.xml">
+        <exclude name="LawOfDemeter"/>
+        <exclude name="LoosePackageCoupling"/>
+    </rule>
+
+    <exclude-pattern>.*src/main/java/CPUPlayer.java.*</exclude-pattern>
+    <exclude-pattern>.*src/main/java/GameDriver.java.*</exclude-pattern>
+    <exclude-pattern>.*src/main/java/HumanPlayer.java.*</exclude-pattern>
+    <exclude-pattern>.*src/main/java/Monster.java.*</exclude-pattern>
+    <exclude-pattern>.*src/main/java/Move.java.*</exclude-pattern>
+
+
+</ruleset>
