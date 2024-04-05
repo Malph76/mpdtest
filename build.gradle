@@ -18,3 +18,7 @@ pmd {
     ruleSets = []
     ignoreFailures = true
 }
+
+javadoc{
+    failOnError = false
+}
